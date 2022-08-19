@@ -1,19 +1,23 @@
 import styled from 'styled-components';
 
-export const ButtonContainer = styled.ul`
+export const StyledButtonList = styled.ul`
   display: flex;
 `;
 
-export const ButtonItem = styled.li`
+export const StyledButtonItem = styled.li`
   list-style: none;
 `;
 
-export const Button = styled.button`
-  background-color: #dfd5d5;
-  color: black;
-  padding: 5px;
-  margin-right: 10px;
-  border: none;
-  border-radius: 3px;
+export const StyledButton = styled.button`
+  background-color: ${p => p.theme.colors.primaryButton};
+  color: ${p => p.theme.colors.white};
+  padding: ${p => p.theme.space[3]}px;
+  margin-right: ${p => p.theme.space[4]}px;
+  border: ${p => p.theme.borders.none};
+  border-radius: ${p => p.theme.radii.button};
   cursor: pointer;
+
+  :hover {
+    background-color: ${p => p.theme.colors.secondaryButton};
+  }
 `;

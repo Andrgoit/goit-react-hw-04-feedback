@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 import {
-  ButtonContainer,
-  ButtonItem,
-  Button,
+  StyledButtonList,
+  StyledButtonItem,
+  StyledButton,
 } from 'components/FeedbackOptions/FeedbackOptions.styled';
 
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <ButtonContainer>
+    <StyledButtonList>
       {options.map(option => {
         return (
-          <ButtonItem key={option}>
-            <Button
+          <StyledButtonItem key={option}>
+            <StyledButton
               type="button"
               name={option}
               onClick={() => {
@@ -19,11 +19,11 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
               }}
             >
               {option}
-            </Button>
-          </ButtonItem>
+            </StyledButton>
+          </StyledButtonItem>
         );
       })}
-    </ButtonContainer>
+    </StyledButtonList>
   );
 };
 
